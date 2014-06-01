@@ -6,9 +6,13 @@ require 'power_assert'
 module Minitest
   module PowerAssert
     module Assertions
-      def power_assert(&blk)
-        ::PowerAssert.start(blk, assertion_method: __method__) do |pa|
-          assert pa.yield, pa.message_proc
+      def assert test = nil, msg = nil, &blk
+        if block_given?
+          ::PowerAssert.start(blk, assertion_method: __method__) do |pa|
+            super pa.yield, pa.message_proc
+          end
+        else
+          super test, msg
         end
       end
     end
