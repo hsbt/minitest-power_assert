@@ -1,6 +1,8 @@
 # Minitest::PowerAssert
 
-TODO: Write a gem description
+Power Assert for Minitest.
+
+Basic concept is [test-unit-power_assert](https://github.com/k-tsj/test-unit-power_assert).
 
 ## Installation
 
@@ -18,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+see [testcase](https://github.com/hsbt/minitest-power_assert/blob/master/test/test_power_assert.rb)
 
 ## Contributing
 
