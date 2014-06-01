@@ -24,6 +24,32 @@ Or install it yourself as:
 
 see [testcase](https://github.com/hsbt/minitest-power_assert/blob/master/test/test_power_assert.rb)
 
+### Basic Testcase
+
+minitest-power_assert overwride assert method. You can use power_assert by assert with block.
+
+```ruby
+class TestPowerAssert < Minitest::Test
+  def test_power_assert_failed
+    assert { "0".class == "3".to_i.times.map {|i| i + 1 }.class }
+  end
+end
+```
+
+If test is failed, you can see follow message.
+
+```shell
+  1) Failure:
+TestPowerAssert#test_power_assert_failed [test/test_power_assert.rb:10]:
+    assert { "0".class == "3".to_i.times.map {|i| i + 1 }.class }
+                 |            |    |     |                |
+                 |            |    |     |                Array
+                 |            |    |     [1, 2, 3]
+                 |            |    #<Enumerator: 3:times>
+                 |            3
+                 String
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/minitest-power_assert/fork )
