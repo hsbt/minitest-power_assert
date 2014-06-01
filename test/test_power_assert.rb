@@ -1,6 +1,5 @@
 require "minitest/autorun"
 require 'minitest/power_assert'
-require 'stringio'
 
 class TestPowerAssert < Minitest::Test
   def test_power_assert
