@@ -8,11 +8,7 @@ module Minitest
     module Assertions
       def power_assert(&blk)
         ::PowerAssert.start(blk, assertion_method: __method__) do |pa|
-          prc = pa.message_proc
-          class << prc
-            alias to_s call
-          end
-          assert pa.yield, prc
+          assert pa.yield, pa.message_proc
         end
       end
     end
