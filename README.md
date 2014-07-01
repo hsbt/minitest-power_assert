@@ -52,7 +52,7 @@ TestPowerAssert#test_power_assert_failed [test/test_power_assert.rb:10]:
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/minitest-power_assert/fork )
+1. Fork it ( https://github.com/hsbt/minitest-power_assert/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
