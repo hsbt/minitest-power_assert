@@ -26,7 +26,7 @@ see [testcase](https://github.com/hsbt/minitest-power_assert/blob/master/test/te
 
 ### Basic Testcase
 
-minitest-power_assert overwride assert method. You can use power_assert by assert with block.
+minitest-power_assert overrides assert method. You can use power_assert by assert with block.
 
 ```ruby
 class TestPowerAssert < Minitest::Test
