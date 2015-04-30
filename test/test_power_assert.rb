@@ -31,7 +31,9 @@ class TestPowerAssert < Minitest::Test
   end
 
   def test_power_refute_failed
-    refute { "0".each_char.class == "3".to_i.times.map {|i| i + 1 }.class }
+    refute { "0".class == String }
+  rescue Minitest::Assertion => e
+    assert_match(/String/, e.message)
   end
 
   def test_refute
@@ -39,6 +41,8 @@ class TestPowerAssert < Minitest::Test
   end
 
   def test_refute_failed
-    refute "0".each_char.class == "3".to_i.times.map {|i| i + 1 }.class
+    refute "0".class == String
+  rescue Minitest::Assertion => e
+    assert_match(/Failed refutation, no message given/, e.message)
   end
 end
