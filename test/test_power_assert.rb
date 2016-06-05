@@ -23,7 +23,7 @@ class TestPowerAssert < Minitest::Test
   def test_assert_failed
     assert "0".class == "3".to_i.times.map {|i| i + 1 }.class
   rescue Minitest::Assertion => e
-    assert_match(/Failed assertion, no message given./, e.message)
+    assert_match(/Expected false to be truthy./, e.message)
   end
 
   def test_power_refute
@@ -43,6 +43,6 @@ class TestPowerAssert < Minitest::Test
   def test_refute_failed
     refute "0".class == String
   rescue Minitest::Assertion => e
-    assert_match(/Failed refutation, no message given/, e.message)
+    assert_match(/Expected true to not be truthy./, e.message)
   end
 end
