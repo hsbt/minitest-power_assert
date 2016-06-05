@@ -2,9 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/minitest-power_assert.png)](https://rubygems.org/gems/minitest-power_assert) [![Build Status](https://travis-ci.org/hsbt/minitest-power_assert.png)](https://travis-ci.org/hsbt/minitest-power_assert)
 
-Power Assert for Minitest.
-
-Basic concept is [test-unit-power_assert](https://github.com/k-tsj/test-unit-power_assert).
+A Power Assert implementation for Minitest. This gem is inspired by the [test-unit-power_assert](https://github.com/k-tsj/test-unit-power_assert) gem.
 
 ## Installation
 
@@ -26,7 +24,7 @@ see [testcase](https://github.com/hsbt/minitest-power_assert/blob/master/test/te
 
 ### Basic Testcase
 
-minitest-power_assert overrides assert method. You can use power_assert by assert with block.
+The `minitest-power_assert` gem overrides the `#assert` method. In order to use power assert, call the assert method with a block:
 
 ```ruby
 class TestPowerAssert < Minitest::Test
@@ -36,7 +34,7 @@ class TestPowerAssert < Minitest::Test
 end
 ```
 
-If test is failed, you can see follow message.
+If the test above fails, it displays a test result with detailed information about variables:
 
 ```shell
   1) Failure:
