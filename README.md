@@ -1,6 +1,7 @@
 # Minitest::PowerAssert
 
-[![Gem Version](https://badge.fury.io/rb/minitest-power_assert.png)](https://rubygems.org/gems/minitest-power_assert) [![Build Status](https://travis-ci.org/hsbt/minitest-power_assert.png)](https://travis-ci.org/hsbt/minitest-power_assert)
+[![Gem Version](https://badge.fury.io/rb/minitest-power_assert.svg)](https://rubygems.org/gems/minitest-power_assert)
+[![Build Status](https://travis-ci.org/hsbt/minitest-power_assert.svg)](https://travis-ci.org/hsbt/minitest-power_assert)
 
 A Power Assert implementation for Minitest. This gem is inspired by the [test-unit-power_assert](https://github.com/k-tsj/test-unit-power_assert) gem.
 
