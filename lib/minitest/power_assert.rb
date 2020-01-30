@@ -6,9 +6,9 @@ require 'power_assert'
 module Minitest
   module PowerAssert
     module Assertions
-      def assert(test = nil, msg = nil)
+      def assert(test = nil, msg = nil, &block)
         if block_given?
-          ::PowerAssert.start(Proc.new, assertion_method: __method__) do |pa|
+          ::PowerAssert.start(block, assertion_method: __method__) do |pa|
             super pa.yield, pa.extend(ContextExtension)
           end
         else
@@ -16,9 +16,9 @@ module Minitest
         end
       end
 
-      def refute(test = nil, msg = nil)
+      def refute(test = nil, msg = nil, &block)
         if block_given?
-          ::PowerAssert.start(Proc.new, assertion_method: __method__) do |pa|
+          ::PowerAssert.start(block, assertion_method: __method__) do |pa|
             super pa.yield, pa.extend(ContextExtension)
           end
         else
