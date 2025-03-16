@@ -8,7 +8,7 @@ module Minitest
     module Assertions
       def assert(test = nil, msg = nil, &block)
         if block_given?
-          ::PowerAssert.start(block, assertion_method: __method__) do |pa|
+          ::PowerAssert.start(block, assertion_method: __callee__) do |pa|
             super pa.yield, pa.extend(ContextExtension)
           end
         else
@@ -18,7 +18,7 @@ module Minitest
 
       def refute(test = nil, msg = nil, &block)
         if block_given?
-          ::PowerAssert.start(block, assertion_method: __method__) do |pa|
+          ::PowerAssert.start(block, assertion_method: __callee__) do |pa|
             super pa.yield, pa.extend(ContextExtension)
           end
         else
