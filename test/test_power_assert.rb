@@ -17,7 +17,7 @@ class TestPowerAssert < Minitest::Test
       assert_match(/String/, e.message)
     rescue Minitest::Assertion
       # https://github.com/ruby/power_assert/issues/53
-      omit if RUBY_VERSION >= '3.4'
+      skip if RUBY_VERSION >= '3.4'
     end
   end
 
